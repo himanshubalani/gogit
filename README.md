@@ -22,6 +22,10 @@ Paste this into PowerShell to download both scripts to your `Scripts` folder:
 $target="$env:USERPROFILE\Scripts"; New-Item -ItemType Directory -Force -Path $target; Invoke-WebRequest https://raw.githubusercontent.com/himanshubalani/gogit/main/gogit.bat -OutFile "$target\gogit.bat"; Invoke-WebRequest https://raw.githubusercontent.com/himanshubalani/gogit/main/gogit.ps1 -OutFile "$target\gogit.ps1"
 
 ```
+Now paste this to add the `Scripts` folder just created to Environment Variables.
+```
+$fp="$env:USERPROFILE\Scripts";$p=[Environment]::GetEnvironmentVariable("PATH","User");if(-not ($p.Split(";") -contains $fp)){[Environment]::SetEnvironmentVariable("PATH","$p;$fp","User")}
+```
 ---
 ## Install
 
@@ -29,7 +33,7 @@ To use these scripts from any folder on your system, follow these steps:
 
 1. **Download the scripts**: [gogit.ps1](https://raw.githubusercontent.com/himanshubalani/gogit/main/gogit.ps1) and [gogit.bat](https://raw.githubusercontent.com/himanshubalani/gogit/main/gogit.bat)
 2. **Move the scripts**: Place the script in a directory of your choice (e.g., `C:\Users\<YourUsername>\Scripts`).
-3. **Add the directory to your PATH**: This allows you to run the script from any command prompt or PowerShell window. (see [Enviroment Variables](https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)))
+3. **Add the directory to your PATH**: Doing this allows you to run the script from any command prompt or PowerShell window. (see [Enviroment Variables](https://learn.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ee537574(v=office.14)))
     - Press Win + S and search for "Environment Variables"
     - Click "Edit the system environment variables"
     - In the System Properties window, click "Environment Variables"
