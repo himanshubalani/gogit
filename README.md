@@ -44,13 +44,21 @@ To use these scripts from any folder on your system, follow these steps:
 
 ## Usage
 
-```
-gogit
-```
-or
-```
-gogit [remote-name]
-```
+### Commands
+
+- `gogit`  
+  Opens the URL of the `origin` remote in your default browser. (default)
+
+- `gogit [remote-name]`  
+  Opens the specified remote
+
+- `gogit show`  
+  Lists all configured Git remotes with their URLs.
+
+- `gogit --help`  
+  Displays usage instructions and available commands.
+
+---
 
 - If no argument is provided, it defaults to `origin`
 - Converts SSH-style URLs (e.g., `git@github.com:user/repo.git`) to HTTPS
@@ -61,6 +69,8 @@ gogit [remote-name]
 ```bat
 gogit
 gogit dev
+gogit show
+gogit --help
 ```
 
 ## How It Works
