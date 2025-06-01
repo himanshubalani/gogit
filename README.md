@@ -1,6 +1,7 @@
 # gogit
-Scripts to open git remote url in browsers
+Scripts to open git remote url in browsers. Look on [Peerlist LaunchPad](https://peerlist.io/himanshubalani/project/gogit)
 
+![gogit-supporters-light](https://github.com/user-attachments/assets/41fd0c73-6c0e-4e3d-8e5b-8f0ff9da9c1c)
 
 
 It defaults to the `origin` remote but supports passing a different remote name if needed.
